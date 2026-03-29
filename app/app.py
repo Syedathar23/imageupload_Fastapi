@@ -70,7 +70,7 @@ async def upload_file(
             os.unlink(temp_file_path)
         file.file.close()
 
-@app.get("/feed")
+@app.get("/data")
 async def get_data(
         session:AsyncSession=Depends(get_async_session),
         user: User = Depends(current_active_user),
