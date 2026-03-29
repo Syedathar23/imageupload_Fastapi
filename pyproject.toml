@@ -1,0 +1,22 @@
+[project]
+name = "fastapi1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.135.2",
+    "fastapi-users[sqlalchemy]>=15.0.4",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.55.0",
+    "uvicorn[standard]>=0.42.0",
+    "fastapi>=0.135.2",
+    "uvicorn>=0.42.0",
+    "sqlalchemy>=2.0.48",
+    "asyncpg>=0.31.0",
+    "python-multipart>=0.0.22",
+    "imagekitio>=4.0.0",
+    "python-dotenv>=1.2.2",
+    "pydantic>=2.12.5",
+    "PyJWT>=2.12.1",
+]
