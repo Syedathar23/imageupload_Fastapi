@@ -103,7 +103,7 @@ def create_transformed_url(original_url, transformation_params, caption=None):
 def feed_page():
     st.title("🏠 Feed")
 
-    response = requests.get(f"{BASE_URL}/data", headers=get_headers())  # ✅ fixed /feed -> /data
+    response = requests.get(f"{BASE_URL}/feed", headers=get_headers())  # ✅ fixed /feed -> /data
     st.write(response.status_code)  # ← add this temporarily
     st.write(response.json())
     if response.status_code == 200:
