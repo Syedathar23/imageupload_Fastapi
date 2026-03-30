@@ -43,7 +43,7 @@ async def upload_file(
             temp_file_path = temp_file.name
             shutil.copyfileobj(file.file, temp_file)
 
-        upload_result = imagekit.upload(
+        upload_result = imagekit.upload_file(
             file=open(temp_file_path, "rb"),
             file_name=file.filename,
             options={
