@@ -104,8 +104,8 @@ def feed_page():
     st.title("🏠 Feed")
 
     response = requests.get(f"{BASE_URL}/feed", headers=get_headers())  # ✅ fixed /feed -> /data
-    st.write(response.status_code)  # ← add this temporarily
-    st.write(response.json())
+    # ← add this temporarily
+
     if response.status_code == 200:
         posts = response.json()["posts"]
 
