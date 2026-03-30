@@ -32,11 +32,15 @@ app.include_router(fastapi_users.get_verify_router(UserRead), prefix="/auth", ta
 app.include_router(fastapi_users.get_users_router(UserRead, UserUpdate), prefix="/users", tags=["users"])
 @app.post("/upload")
 async def upload_file(
+
         file:UploadFile=File(...),
         caption: str = Form(""),
         user : User=Depends(current_active_user),
         session: AsyncSession= Depends(get_async_session)
 ):
+    print(dir(imagekit))
+    import sys
+    print(sys.modules['imagekitio'].__version__)
     temp_file_path = None
     try:
         with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(file.filename)[1]) as temp_file:
